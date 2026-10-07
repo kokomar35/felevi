@@ -1,1 +1,315 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Csodaland Vidámpark</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
 
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow border-bottom border-secondary">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3 text-danger d-flex align-items-center" href="#">
+                <i class="bi bi-stars me-2"></i>Csodaland
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Menü váltása">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-lg-center gap-3">
+                    <li class="nav-item"><a class="nav-link text-white" href="#slideshow">Galéria</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#programok">Attrakciók</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#jegyek">Jegyvásárlás</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#terkép">Megközelítés</a></li>
+                    <li class="nav-item">
+                        <a href="#jegyek" class="btn btn-danger rounded-pill px-4 fw-bold shadow-sm">Jegyek</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="neon-banner text-center py-3 px-2 fs-5">
+        <i class="bi bi-lightning-charge-fill me-2"></i> ÉJSZAKAI AKCIÓ: Minden éjszakai belépőhöz ingyen vattacukor jár! 
+        <span class="badge bg-light text-dark ms-2">Csak ma!</span>
+    </div>
+
+    <header class="hero-section text-center text-lg-start">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7 mb-4 mb-lg-0">
+                    <span class="badge bg-danger bg-opacity-25 text-danger border border-danger mb-3 px-3 py-2 rounded-pill fw-semibold">Élmény egész családnak</span>
+                    <h1 class="display-3 fw-extrabold mb-3 text-white">Lépj be a varázslat és izgalom világába!</h1>
+                    <p class="lead mb-4 text-secondary">Próbáld ki a legújabb hullámvasutakat, szédületes körhintákat és élvezd a felejthetetlen programokat a Csodaland Vidámparkban.</p>
+                    <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start">
+                        <a href="#jegyek" class="btn btn-danger btn-lg fw-bold rounded-pill px-5 shadow">Jegyvásárlás</a>
+                        <a href="#programok" class="btn btn-outline-light btn-lg rounded-pill px-4">Attrakciók listája</a>
+                    </div>
+                </div>
+                <div class="col-lg-5 text-center">
+                    <div class="p-4 rounded-4 shadow-lg border border-secondary bg-dark text-start">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="bg-danger text-white rounded-circle p-3 me-3">
+                                <i class="bi bi-clock-history fs-4"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-0 fw-bold text-white">Ma Nyitva</h5>
+                                <small class="text-success fw-semibold"><i class="bi bi-circle-fill fs-6 me-1"></i> 10:00 - 22:00</small>
+                            </div>
+                        </div>
+                        <p class="text-secondary small mb-3">Helyszín: Élmény utca 1., Varázsváros. Ingyenes parkolás az összes látogató számára!</p>
+                        <div class="alert alert-secondary py-2 small mb-0 bg-dark text-light border-secondary">
+                            <i class="bi bi-info-circle text-danger me-1"></i> Idén új óriáskerékkel várunk!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-5 bg-dark" id="slideshow">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold text-white">Ízelítő a Látványosságokból</h2>
+                <p class="text-secondary">Tekints meg néhány pillanatképet a park legnépszerűbb élményeiről</p>
+            </div>
+            <div id="parkCarousel" class="carousel slide shadow-lg rounded-4 overflow-hidden border border-secondary" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#parkCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#parkCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#parkCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://placehold.co/1200x500/1e293b/ffffff?text=Mennydorges+Hullamvasut" class="d-block w-100" alt="Hullámvasút">
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded p-3 mb-3">
+                            <h3 class="fw-bold text-white">Mennydörgés Hullámvasút</h3>
+                            <p class="text-secondary mb-0">Adrenalinlöket a legbátrabbaknak! 80 km/h sebesség és hatalmas zuhanások.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://placehold.co/1200x500/334155/ffffff?text=Csillagfenyes+Oriaslbasz" class="d-block w-100" alt="Óriáskerék">
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded p-3 mb-3">
+                            <h3 class="fw-bold text-white">Csillagfényes Óriáskerék</h3>
+                            <p class="text-secondary mb-0">Csodás kilátás egész Varázsvárosra felülről, romantikus és családi kabinokkal.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://placehold.co/1200x500/475569/ffffff?text=Vizi+Kalandpark" class="d-block w-100" alt="Vízi élmény">
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded p-3 mb-3">
+                            <h3 class="fw-bold text-white">Vad Vízi Kaland</h3>
+                            <p class="text-secondary mb-0">Hűsítő kaland a zubogó folyón – garantáltan nem maradsz szárazon!</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#parkCarousel" data-bs-slide="next">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Előző</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#parkCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Következő</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 custom-section-bg" id="programok">
+        <div class="container py-4">
+            <div class="d-flex justify-content-between align-items-center mb-5 flex-wrap gap-3">
+                <div>
+                    <h2 class="fw-bold text-white mb-1">Dinamikus Programok & Attrakciók</h2>
+                    <p class="text-secondary mb-0">JSON alapú adatbetöltés</p>
+                </div>
+                <button class="btn btn-outline-danger btn-sm rounded-pill px-3" id="loadAttractionsBtn">
+                    <i class="bi bi-arrow-clockwise me-1"></i> Adatok frissítése
+                </button>
+            </div>
+            <div class="row g-4" id="attractionsContainer">
+                <div class="text-center py-5 col-12 text-secondary" id="loadingIndicator">
+                    <div class="spinner-border text-danger" role="status">
+                        <span class="visually-hidden">Betöltés...</span>
+                    </div>
+                    <p class="mt-2">Attrakciók betöltése...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-dark border-top border-bottom border-secondary" id="jegyek">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold text-white">Jegyvásárlás & Belépők</h2>
+                <p class="text-secondary">Válaszd ki a számodra megfelelő jegytípust és darabszámot</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card bg-secondary bg-opacity-10 border border-secondary rounded-4 p-4 p-md-5 shadow-lg">
+                        <form id="ticketForm">
+                            <div class="mb-4">
+                                <label for="ticketType" class="form-label text-white fw-semibold">Válassz jegytípust:</label>
+                                <select class="form-select bg-dark text-white border-secondary py-3" id="ticketType" required>
+                                    <option value="" selected disabled>-- Válassz jegyet --</option>
+                                    <option value="5000">Felnőtt Napijegy - 5 000 Ft</option>
+                                    <option value="3500">Gyermek / Nyugdíjas Napijegy (14 év alatt / 65 év felett) - 3 500 Ft</option>
+                                    <option value="15000">Caládi Csomag (2 felnőtt + 2 gyermek) - 15 000 Ft</option>
+                                    <option value="7500">Éjszakai VIP Belépő (Ingyen vattacukorral!) - 7 500 Ft</option>
+                                </select>
+                            </div>
+                            <div class="mb-4">
+                                <label for="ticketCount" class="form-label text-white fw-semibold">Darabszám:</label>
+                                <input type="number" class="form-control bg-dark text-white border-secondary py-3" id="ticketCount" min="1" max="10" value="1" required>
+                            </div>
+                            <div class="mb-4 p-3 bg-dark rounded border border-secondary d-flex justify-content-between align-items-center">
+                                <span class="text-secondary">Fizetendő összesen:</span>
+                                <span class="fs-4 fw-bold text-danger" id="totalPrice">5 000 Ft</span>
+                            </div>
+                            <button type="submit" class="btn btn-danger btn-lg w-100 fw-bold py-3 rounded-pill shadow">
+                                <i class="bi bi-cart-check me-2"></i> Tovább a Bankkártyás Fizetéshez
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 custom-section-bg" id="terkép">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold text-white">Hol Találsz Minket?</h2>
+                <p class="text-secondary">Látogass el hozzánk személyesen</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="card bg-dark border border-secondary rounded-4 overflow-hidden shadow-lg">
+                        <div class="ratio ratio-16x9">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2755.7725838562!2d18.94!3d46.97!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDbCsDU4JzEyLjAiTiAxOMKwNTYnMjQuMCJF!5e0!3m2!1shu!2shu!4v1650000000000!5m2!1shu!2shu" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <div class="card-body p-4 text-center text-md-start d-md-flex justify-content-between align-items-center">
+                            <div>
+                                <h5 class="fw-bold text-white mb-1"><i class="bi bi-geo-alt-fill text-danger me-2"></i>Csodaland Vidámpark</h5>
+                                <p class="text-secondary mb-0">Varázsváros, Élmény utca 1., 2400</p>
+                            </div>
+                            <a href="https://maps.google.com" target="_blank" class="btn btn-outline-light btn-sm rounded-pill px-4 mt-3 mt-md-0">Útvonaltervezés</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black text-white py-5 border-top border-secondary">
+        <div class="container">
+            <div class="row g-4 justify-content-between">
+                <div class="col-lg-4">
+                    <h5 class="fw-bold text-danger mb-3"><i class="bi bi-stars me-2"></i>Csodaland</h5>
+                    <p class="text-secondary small">Ahol az álmok valóra válnak és az izgalom sosem ér véget. Magyarország legszórakoztatóbb vidámparkja.</p>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <h6 class="fw-bold mb-3 text-white">Gyorslinkek</h6>
+                    <ul class="list-unstyled text-secondary small">
+                        <li class="mb-2"><a href="#slideshow" class="text-decoration-none text-secondary">Galéria</a></li>
+                        <li class="mb-2"><a href="#programok" class="text-decoration-none text-secondary">Attrakciók</a></li>
+                        <li class="mb-2"><a href="#jegyek" class="text-decoration-none text-secondary">Jegyvásárlás</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <h6 class="fw-bold mb-3 text-white">Kapcsolat</h6>
+                    <ul class="list-unstyled text-secondary small">
+                        <li class="mb-2">info@csodaland.hu</li>
+                        <li class="mb-2">+36 20 555 1234</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="border-secondary my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="text-secondary small mb-0">&copy; 2026 Csodaland Vidámpark. Minden jog fenntartva.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <span class="text-secondary small">Készült HTML5, CSS3, JS & Bootstrap 5 felhasználásával.</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="paymentModal" tabindex="-1" aria-labelledby="paymentModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content shadow-lg">
+                <div class="modal-header border-bottom border-secondary">
+                    <h5 class="modal-title fw-bold text-white" id="paymentModalLabel">
+                        <i class="bi bi-credit-card-2-front text-danger me-2"></i>Bankkártyás Fizetés
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Bezár"></button>
+                </div>
+                <form id="paymentForm">
+                    <div class="modal-body py-4">
+                        <div class="alert alert-secondary bg-dark text-light border-secondary d-flex justify-content-between align-items-center mb-4">
+                            <span class="text-secondary">Fizetendő összeg:</span>
+                            <span class="fs-4 fw-bold text-danger" id="paymentModalPrice">0 Ft</span>
+                        </div>
+                        <div class="mb-3">
+                            <label for="cardName" class="form-label text-white small fw-semibold">Kártyatulajdonos neve</label>
+                            <input type="text" class="form-control bg-dark text-white border-secondary" id="cardName" placeholder="pl. Minta János" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="cardNumber" class="form-label text-white small fw-semibold">Bankkártyaszám</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control bg-dark text-white border-secondary" id="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19" required>
+                                <span class="input-group-text bg-dark border-secondary text-secondary"><i class="bi bi-credit-card"></i></span>
+                            </div>
+                        </div>
+                        <div class="row g-3 mb-2">
+                            <div class="col-6">
+                                <label for="cardExpiry" class="form-label text-white small fw-semibold">Lejárati dátum</label>
+                                <input type="text" class="form-control bg-dark text-white border-secondary" id="cardExpiry" placeholder="MM/ÉÉ" maxlength="5" required>
+                            </div>
+                            <div class="col-6">
+                                <label for="cardCvc" class="form-label text-white small fw-semibold">CVC / CVV</label>
+                                <input type="password" class="form-control bg-dark text-white border-secondary" id="cardCvc" placeholder="123" maxlength="4" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer border-top border-secondary">
+                        <button type="button" class="btn btn-outline-secondary rounded-pill px-4" data-bs-dismiss="modal">Mégse</button>
+                        <button type="submit" class="btn btn-danger rounded-pill px-4 fw-bold">
+                            <i class="bi bi-lock-fill me-1"></i> Fizetés Indítása
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content shadow-lg">
+                <div class="modal-header border-bottom border-secondary">
+                    <h5 class="modal-title fw-bold text-success" id="successModalLabel"><i class="bi bi-check-circle-fill me-2"></i>Sikeres Vásárlás!</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Bezár"></button>
+                </div>
+                <div class="modal-body py-4">
+                    <p class="text-light mb-2">Köszönjük a rendelésed! A jegyek virtuálisan kiállításra kerültek.</p>
+                    <div class="bg-dark p-3 rounded border border-secondary text-start small">
+                        <p class="mb-1 text-secondary"><strong>Típus:</strong> <span id="modalTicketName" class="text-white"></span></p>
+                        <p class="mb-1 text-secondary"><strong>Mennyiség:</strong> <span id="modalTicketQty" class="text-white"></span> db</p>
+                        <p class="mb-0 text-secondary"><strong>Összeg:</strong> <span id="modalTicketPrice" class="text-danger fw-bold"></span></p>
+                    </div>
+                    <p class="text-muted small mt-3 mb-0">*A jegyek érvényesítése a helyszínen történik.</p>
+                </div>
+                <div class="modal-footer border-top border-secondary">
+                    <button type="button" class="btn btn-danger rounded-pill px-4" data-bs-dismiss="modal">Rendben</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js.js"></script>
+</body>
+</html>
