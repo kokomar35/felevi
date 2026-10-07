@@ -1,1 +1,51 @@
-
+    body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+        }
+        .neon-banner {
+            background: linear-gradient(90deg, #ff007f, #7928ca, #ff007f);
+            background-size: 200% auto;
+            animation: gradientMove 4s linear infinite, pulseGlow 2s ease-in-out infinite alternate;
+            color: white;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 200% 50%; }
+        }
+        @keyframes pulseGlow {
+            0% { box-shadow: 0 0 10px rgba(255, 0, 127, 0.6); }
+            100% { box-shadow: 0 0 25px rgba(255, 0, 127, 0.9), 0 0 40px rgba(121, 40, 202, 0.7); }
+        }
+        .hero-section {
+            background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.9)), url('https://placehold.co/1920x1080/1e293b/ffffff?text=Csodaland+Vidampark') center/cover no-repeat;
+            padding: 7rem 0;
+        }
+        .attraction-card {
+            background-color: #1e293b;
+            border: 1px solid #334155;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 1rem;
+            overflow: hidden;
+        }
+        .attraction-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 1rem 2rem rgba(121, 40, 202, 0.25);
+            border-color: #7928ca;
+        }
+        .carousel-item img {
+            height: 500px;
+            object-fit: cover;
+            filter: brightness(0.85);
+        }
+        .custom-section-bg {
+            background-color: #111827;
+        }
+        .modal-content {
+            background-color: #1e293b;
+            color: #f8fafc;
+            border: 1px solid #334155;
+        }
