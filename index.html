@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Csodaland Vidámpark</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow border-bottom border-secondary">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3 text-danger d-flex align-items-center" href="#">
+                <i class="bi bi-stars me-2"></i>Csodaland
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-lg-center gap-3">
+                    <li class="nav-item"><a class="nav-link text-white" href="#programok">Attrakciók</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#jegyek">Jegyvásárlás</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#terkép">Megközelítés</a></li>
+                    <li class="nav-item">
+                        <a href="#jegyek" class="btn btn-danger rounded-pill px-4 fw-bold shadow-sm">Jegyek</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="neon-banner text-center py-3 px-2 fs-5">
+        <i class="bi bi-lightning-charge-fill me-2"></i> ÉJSZAKAI AKCIÓ: Minden éjszakai belépőhöz ingyen vattacukor jár! 
+        <span class="badge bg-light text-dark ms-2">Csak ma!</span>
+    </div>
+
+    <header class="hero-section text-center text-white">
+        <div class="container">
+            <span class="badge bg-danger bg-opacity-25 text-danger border border-danger mb-3 px-3 py-2 rounded-pill fw-semibold">Élmény egész családnak</span>
+            <h1 class="display-3 fw-bold mb-3">Lépj be a varázslat és izgalom világába!</h1>
+            <p class="lead mb-4 text-secondary">Próbáld ki a legújabb hullámvasutakat, szédületes körhintákat és élvezd a programokat.</p>
+            <a href="#jegyek" class="btn btn-danger btn-lg fw-bold rounded-pill px-5 shadow">Jegyvásárlás</a>
+        </div>
+    </header>
+
+    <section class="py-5 custom-section-bg" id="programok">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold text-white">Dinamikus Programok & Attrakciók</h2>
+                <p class="text-secondary">Válogass kedvedre a park legnépszerűbb élményei közül</p>
+            </div>
+            <div class="row g-4" id="attractionsContainer">
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-dark border-top border-bottom border-secondary" id="jegyek">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold text-white">Jegyvásárlás & Belépők</h2>
+                <p class="text-secondary">Válaszd ki a számodra megfelelő jegytípust és darabszámot</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card bg-secondary bg-opacity-10 border border-secondary rounded-4 p-4 p-md-5 shadow-lg">
+                        <form id="ticketForm">
+                            <div class="mb-4">
+                                <label for="ticketType" class="form-label text-white fw-semibold">Válassz jegytípust:</label>
+                                <select class="form-select bg-dark text-white border-secondary py-3" id="ticketType" required>
+                                    <option value="" selected disabled>-- Válassz jegyet --</option>
+                                    <option value="5000">Felnőtt Napijegy - 5 000 Ft</option>
+                                    <option value="3500">Gyermek / Nyugdíjas Napijegy - 3 500 Ft</option>
+                                </select>
+                            </div>
+                            <div class="mb-4">
+                                <label for="ticketCount" class="form-label text-white fw-semibold">Darabszám:</label>
+                                <input type="number" class="form-control bg-dark text-white border-secondary py-3" id="ticketCount" min="1" max="10" value="1" required>
+                            </div>
+                            <div class="mb-4 p-3 bg-dark rounded border border-secondary d-flex justify-content-between align-items-center">
+                                <span class="text-secondary">Fizetendő összesen:</span>
+                                <span class="fs-4 fw-bold text-danger" id="totalPrice">5 000 Ft</span>
+                            </div>
+                            <button type="submit" class="btn btn-danger btn-lg w-100 fw-bold py-3 rounded-pill shadow">
+                                <i class="bi bi-cart-check me-2"></i> Megrendelés Indítása
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 custom-section-bg" id="terkép">
+        <div class="container py-4 text-center">
+            <h2 class="fw-bold text-white mb-2">Hol Találsz Minket?</h2>
+            <p class="text-secondary mb-4">Varázsváros, Élmény utca 1.</p>
+            <div class="ratio ratio-16x9 rounded-4 overflow-hidden shadow-lg border border-secondary">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2755.7725838562!2d18.94!3d46.97!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sNDCs!5e0!3m2!1shu!2shu!4v1650000000000" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black text-white py-5 border-top border-secondary text-center">
+        <div class="container">
+            <p class="text-secondary small mb-0">&copy; 2026 Csodaland Vidámpark. Minden jog fenntartva.</p>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="successModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content shadow-lg">
+                <div class="modal-header border-bottom border-secondary">
+                    <h5 class="modal-title fw-bold text-success"><i class="bi bi-check-circle-fill me-2"></i>Sikeres Vásárlás!</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body py-4">
+                    <p class="text-light mb-2">Köszönjük a rendelésed! A jegyek kiállításra kerültek.</p>
+                    <div class="bg-dark p-3 rounded border border-secondary text-start small">
+                        <p class="mb-0 text-secondary"><strong>Összeg:</strong> <span id="modalTicketPrice" class="text-danger fw-bold"></span></p>
+                    </div>
+                </div>
+                <div class="modal-footer border-top border-secondary">
+                    <button type="button" class="btn btn-danger rounded-pill px-4" data-bs-dismiss="modal">Rendben</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js.js"></script>
+</body>
+</html>
