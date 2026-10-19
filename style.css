@@ -1,54 +1,501 @@
-body {
-    font-family: 'Inter', sans-serif;
-    background-color: #0f172a;
-    color: #f8fafc;
+* {
+    box-sizing: border-box;
 }
 
-.neon-banner {
-    background: linear-gradient(90deg, #ff007f, #7928ca, #ff007f);
-    background-size: 200% auto;
-    animation: gradientMove 4s linear infinite, pulseGlow 2s ease-in-out infinite alternate;
-    color: white;
+body {
+    margin: 0;
+    font-family: "Nunito", sans-serif;
+    background: #f4efe4;
+    color: #1b2a22;
+    line-height: 1.5;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+h1, h2, h3 {
+    font-family: "Fraunces", Georgia, serif;
+    line-height: 1.2;
+    margin: 0 0 0.4rem;
+}
+
+h1 {
+    font-size: 2.4rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+p {
+    margin: 0.3rem 0;
+}
+
+.doboz {
+    width: min(1120px, calc(100% - 2rem));
+    margin: 0 auto;
+}
+
+.sav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.4rem 1.5rem;
+    padding: 0.45rem 1rem;
+    font-weight: 800;
+    font-size: 0.95rem;
+}
+
+.sav p {
+    margin: 0;
+}
+
+.sav-zold {
+    background: #1c7a4d;
+    color: #f4efe4;
+}
+
+.sav-narancs {
+    background: #c2410c;
+    color: #f4efe4;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.fej {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: #fffdf8;
+    border-bottom: 1px solid #e3d7c6;
+}
+
+.fej-sor {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.7rem 0;
+}
+
+.logo {
+    font-family: "Fraunces", Georgia, serif;
+    font-size: 1.7rem;
     font-weight: 700;
-    letter-spacing: 1px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 1.1rem;
+    font-weight: 800;
+}
+
+.menu a:hover {
+    color: #1c7a4d;
+}
+
+.menu-gomb {
+    display: none;
+    min-height: 44px;
+    padding: 0 1rem;
+    border: 1px solid #e3d7c6;
+    border-radius: 999px;
+    background: #fffdf8;
+    font: inherit;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.gomb {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 0 1.4rem;
+    border: 0;
+    border-radius: 999px;
+    background: #c2410c;
+    color: #fffdf8;
+    font: inherit;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.teljes {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.hero {
+    min-height: 32rem;
+    display: flex;
+    align-items: flex-end;
+    background: #1b2a22 url("park/hero.jpg") center / cover no-repeat;
+}
+
+.hero-szoveg {
+    width: min(36rem, calc(100% - 2rem));
+    margin: 2rem auto 2rem  max(1rem, calc((100% - 1120px) / 2));
+    padding: 1.5rem;
+    border-radius: 1.4rem;
+    background: #1b2a22;
+    color: #f4efe4;
+}
+
+.cimke {
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
 }
 
-@keyframes gradientMove {
-    0% { background-position: 0% 50%; }
-    100% { background-position: 200% 50%; }
+.kartyak {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.8rem;
+    padding: 1.5rem 0 2.5rem;
 }
 
-@keyframes pulseGlow {
-    0% { box-shadow: 0 0 10px rgba(255, 0, 127, 0.6); }
-    100% { box-shadow: 0 0 25px rgba(255, 0, 127, 0.9), 0 0 40px rgba(121, 40, 202, 0.7); }
-}
-
-.hero-section {
-    background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.9)), url('https://placehold.co/1920x1080/1e293b/ffffff?text=Csodaland+Vidampark') center/cover no-repeat;
-    padding: 7rem 0;
-}
-
-.attraction-card {
-    background-color: #1e293b;
-    border: 1px solid #334155;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.kis-kartya, .panel {
+    background: #fffdf8;
+    border: 1px solid #e3d7c6;
     border-radius: 1rem;
+}
+
+.kis-kartya {
+    padding: 1rem;
+}
+
+.kis-kartya h2 {
+    font-family: "Nunito", sans-serif;
+    font-size: 1.05rem;
+}
+
+.kis-kartya:hover, .jegy-gomb.aktiv {
+    border-color: #1c7a4d;
+}
+
+.blokk {
+    padding: 3rem 0;
+}
+
+.sav-hatter {
+    background: #e7f3ec;
+    padding: 3rem 0;
+}
+
+.lap {
+    background: #fffdf8;
+    padding: 3rem 0;
+}
+
+.ketto {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.halk {
+    color: #5e6d64;
+}
+
+.panel {
+    padding: 1rem 1.1rem;
+}
+
+label, .vastag {
+    font-weight: 800;
+}
+
+input {
+    width: 100%;
+    margin-top: 0.4rem;
+    padding: 0.75rem 0.9rem;
+    border: 1px solid #e3d7c6;
+    border-radius: 0.8rem;
+    background: #f4efe4;
+    color: #1b2a22;
+    font: inherit;
+    font-size: 1.1rem;
+    font-weight: 800;
+}
+
+.racs, .szolgaltatas-racs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 1.4rem;
+}
+
+.szolgaltatas-racs {
+    grid-template-columns: 1fr 1fr;
+}
+
+.attrakcio {
     overflow: hidden;
+    background: #fffdf8;
+    border: 1px solid #e3d7c6;
+    border-radius: 1rem;
 }
 
-.attraction-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 1rem 2rem rgba(121, 40, 202, 0.25);
-    border-color: #7928ca;
+.attrakcio img {
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
 }
 
-.custom-section-bg {
-    background-color: #111827;
+.attrakcio div {
+    padding: 1rem;
 }
 
-.modal-content {
-    background-color: #1e293b;
-    color: #f8fafc;
-    border: 1px solid #334155;
+.kategoria {
+    margin: 0;
+    color: #1c7a4d;
+    font-weight: 800;
+    font-size: 0.9rem;
+}
+
+table {
+    width: 100%;
+    margin-top: 1rem;
+    border-collapse: collapse;
+    overflow: hidden;
+    border: 1px solid #e3d7c6;
+    border-radius: 1rem;
+}
+
+th, td {
+    padding: 0.75rem 1rem;
+    background: #fffdf8;
+    text-align: left;
+}
+
+td {
+    text-align: right;
+}
+
+tr.ma th, tr.ma td {
+    background: #1c7a4d;
+    color: #f4efe4;
+}
+
+.etel {
+    list-style: none;
+    margin: 1rem 0 0;
+    padding: 0;
+    border-top: 1px solid #e3d7c6;
+}
+
+.etel li {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.9rem 0;
+    border-bottom: 1px solid #e3d7c6;
+}
+
+.ar {
+    color: #c2410c;
+    font-weight: 800;
+}
+
+.lap img, .terkep iframe {
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+    border: 0;
+    border-radius: 1.2rem;
+}
+
+.szuk {
+    width: min(760px, calc(100% - 2rem));
+}
+
+.kozep {
+    text-align: center;
+}
+
+.jegy-form {
+    margin-top: 1.2rem;
+    padding: 1.4rem;
+}
+
+.jegy-valaszto {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.7rem;
+    margin: 0.6rem 0 1rem;
+}
+
+.jegy-gomb {
+    padding: 0.9rem;
+    text-align: left;
+    border: 1px solid #e3d7c6;
+    border-radius: 1rem;
+    background: #f4efe4;
+    font: inherit;
+    cursor: pointer;
+}
+
+.jegy-gomb strong {
+    display: block;
+    margin: 0.2rem 0;
+    color: #c2410c;
+    font-family: "Fraunces", Georgia, serif;
+    font-size: 1.4rem;
+}
+
+.jegy-gomb.aktiv {
+    background: #e7f3ec;
+}
+
+.akcio {
+    padding: 0.7rem 0.9rem;
+    border-radius: 0.8rem;
+    background: #f8e6dc;
+    font-weight: 800;
+}
+
+.osszeg {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    padding: 0.9rem 1rem;
+    border-radius: 1rem;
+    background: #1b2a22;
+    color: #f4efe4;
+}
+
+.osszeg strong {
+    font-family: "Fraunces", Georgia, serif;
+    font-size: 1.8rem;
+}
+
+.hiba {
+    color: #c2410c;
+    font-weight: 800;
+}
+
+.ures {
+    margin-top: 1rem;
+    text-align: center;
+    font-weight: 800;
+}
+
+.terkep {
+    margin-top: 1rem;
+    overflow: hidden;
+    border: 1px solid #e3d7c6;
+    border-radius: 1.2rem;
+}
+
+.terkep iframe {
+    height: 22rem;
+    border-radius: 0;
+}
+
+footer {
+    padding: 2rem 1rem;
+    text-align: center;
+    background: #1b2a22;
+    color: #f4efe4;
+}
+
+footer p:last-child {
+    color: #c9d5ce;
+    font-size: 0.9rem;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 20;
+    display: grid;
+    place-items: center;
+    padding: 1rem;
+    background: rgba(27, 42, 34, 0.7);
+}
+
+.modal[hidden] {
+    display: none;
+}
+
+.modal-doboz {
+    width: min(28rem, 100%);
+}
+
+.osszeg-sor {
+    margin-top: 0.8rem;
+    padding: 0.8rem;
+    border-radius: 0.8rem;
+    background: #f4efe4;
+}
+
+.osszeg-sor strong {
+    color: #c2410c;
+}
+
+.skip {
+    position: absolute;
+    left: -999px;
+}
+
+.skip:focus {
+    left: 1rem;
+    top: 1rem;
+    z-index: 30;
+    background: #fffdf8;
+    padding: 0.5rem;
+}
+
+@media (max-width: 800px) {
+    .menu-gomb {
+        display: inline-flex;
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 0.4rem 1rem 0.8rem;
+        background: #fffdf8;
+        border-bottom: 1px solid #e3d7c6;
+    }
+
+    .menu.nyitva {
+        display: flex;
+    }
+
+    .menu a {
+        padding: 0.75rem 0.2rem;
+    }
+
+    .kartyak, .racs, .ketto, .jegy-valaszto, .szolgaltatas-racs {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .hero-szoveg {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
 }
