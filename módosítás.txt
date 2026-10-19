@@ -1,1 +1,11 @@
-Az eredeti, sablonosabb felépítés helyett a HTML-ben átformáltam a szövegezést és a struktúrát, hogy jobban visszaadja egy igazi, családbarát élménypark hangulatát, megőrizve a sötét hátteret és a figyelemfelkeltő neon bannert. A CSS-stíluslapban megtartottam a látványos keyframe animációkat, a pulzáló fényeket és a sötét kártyás elemeket, de kiszűrtem a felesleges, redundáns szabályokat, így a dizájn egységesebb és letisztultabb lett. A JavaScript logikát is átalakítottam: a korábbi, túlbonyolított, kétlépcsős bankkártyás fizetési modult leegyszerűsítettem egy átlátható, közvetlen rendelés-visszaigazoló folyamatra, míg az attrakciók dinamikus tömbből való betöltését megőriztem a kód többi részének tisztasága érdekében.
+Arculat és Tipográfia: Krém színű háttér (`#f4efe4`), sötétzöld szövegek, narancs gombok (`#c2410c`) és zöld kiemelések (`#1c7a4d`). Az Inter betűtípust Fraunces és Nunito váltotta; a villogó/mozgó effektek megszűntek, a kártyák kerete zöldre vált kijelöléskor.
+ Fejléc és Navigáció: Egyedi `header` készült fix linkekkel és mobilos `menuGomb` lenyílóval. Alatta két sáv fut (zöld: nyitvatartás/időjárás, narancs: esti akció). A hero háttérképe `park/hero.jpg`, a cím sötét dobozban van.
+ Tartalmi Szekciók:
+ Kártyák & Attrakciók: 4 rövid kártya felül, alatta 6 attrakció képpel és minimális magassággal (`magassag` mező szerinti szűréssel és 70–200 cm-es validációval).
+ Nyitvatartás & Infók: Dinamikus táblázat (a hétfői sor `ma` osztállyal kiemelve) + jegy-, busz- és parkolási infók.
+ Vendéglátás: `park/food.jpg` kép melletti árlista az ételekről.
+ Jegyvásárlás: 3 gombos jegyválasztó (felnőtt 5000 Ft, gyerek 3500 Ft, esti 4000 Ft + vattacukor megjegyzés), darabszám, végösszeg számítás, hibaüzenet és saját `#sikeresModal` felugró ablak.
+ Egyebek: 4 szöveges szolgáltatás kártya és OpenStreetMap beágyazás (Varázsváros, Élmény u. 1.).
+
+
+ Logika (JavaScript): Egyedi `forint` függvény ezres-tagozással („Ft”), dinamikus óra-, étel- és jegyfeltöltés, adatok validálása (1–10 db), valamint a sikeres vásárlás utáni modal megjelenítés és űrlap-visszaállítás.
